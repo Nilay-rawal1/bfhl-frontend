@@ -29,7 +29,11 @@ function App() {
       if (!parsedInput.data || !Array.isArray(parsedInput.data)) {
         throw new Error("Invalid JSON format");
       }
-      const res = await axios.post('https://your-heroku-app-name.herokuapp.com/bfhl', parsedInput);
+      const res = await axios.post('https://bfhl-backend-wswe.onrender.com/bfhl', parsedInput, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
       setResponse(res.data);
       setError('');
     } catch (err) {
@@ -56,7 +60,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>API Input</h1>
+      <h1>Bajaj Finserv </h1>
       <textarea
         value={jsonInput}
         onChange={handleInputChange}
