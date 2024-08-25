@@ -4,7 +4,7 @@ module.exports = function(app) {
   app.use(
     '/bfhl', // API endpoint path
     createProxyMiddleware({
-      target: 'https://bfhl-backend-wswe.onrender.com/', // Updated target server URL
+      target: 'https://bhfl-backend-nmr6.onrender.com', // Updated target server URL
       changeOrigin: true,
       pathRewrite: {
         '^/bfhl': '', // This will remove '/bfhl' from the URL before sending the request to the target

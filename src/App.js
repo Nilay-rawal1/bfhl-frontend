@@ -29,7 +29,7 @@ function App() {
       if (!parsedInput.data || !Array.isArray(parsedInput.data)) {
         throw new Error("Invalid JSON format");
       }
-      const res = await axios.post('https://bfhl-backend-wswe.onrender.com/bfhl', parsedInput, {
+      const res = await axios.post('https://bhfl-backend-nmr6.onrender.com/bfhl', parsedInput, {
         headers: {
           'Content-Type': 'application/json'
         }
